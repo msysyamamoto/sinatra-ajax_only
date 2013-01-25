@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+# Specify your gem's dependencies in sinatra-ajax_only.gemspec
+gemspec
+
+gem 'sinatra'
