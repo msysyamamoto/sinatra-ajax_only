@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'sinatra-ajax_only/version'
+require 'sinatra/ajax_only/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "sinatra-ajax_only"
