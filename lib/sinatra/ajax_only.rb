@@ -1,11 +1,18 @@
 require "sinatra/base"
 
 module Sinatra
-  module AjaxOnly
-    set(:ajax_only) do
-        halt 403 if request.xhr?
-    end
-  end
+    module AjaxOnly
+        def ajax_only
+            {:filter_xhr => true}
+        end
 
-  register AjaxOnly
+        private
+        def filter_xhr(_)
+            condition do
+                halt 403 unless request.xhr?
+            end
+        end
+    end
+
+    register AjaxOnly
 end
