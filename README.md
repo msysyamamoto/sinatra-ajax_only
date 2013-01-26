@@ -1,6 +1,8 @@
 # Sinatra::AjaxOnly
 
-TODO: Write a gem description
+Sinatra extensions for blocking non-AJAX requests.
+Provide **ajax_only** condition. Return 403 when request is not ajax.
+
 
 ## Installation
 
@@ -18,7 +20,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### for Classic Style Application
+
+``````Ruby
+# Only allow access via Ajax.
+get "/should/ajax", ajax_only do
+    "Ok!"
+end
+``````
+
+### for Modular Application
+
+``````Ruby
+class MyApp < Sinatra::Base
+
+    register Sinatra::AjaxOnly
+
+    # Only allow access via Ajax.
+    get "/should/ajax", ajax_only do
+        "Hey!"
+    end
+end
+``````
 
 ## Contributing
 
