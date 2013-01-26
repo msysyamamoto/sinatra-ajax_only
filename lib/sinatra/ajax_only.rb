@@ -6,7 +6,6 @@ module Sinatra
             {:filter_xhr => true}
         end
 
-        private
         def filter_xhr(_)
             condition do
                 halt 403 unless request.xhr?
