@@ -6,11 +6,11 @@ require 'sinatra/ajax_only/version'
 Gem::Specification.new do |gem|
   gem.name          = "sinatra-ajax_only"
   gem.version       = Sinatra::AjaxOnly::VERSION
-  gem.authors       = ["ymmtmsys"]
+  gem.authors       = ["msysyamamoto"]
   gem.email         = ["m2yamamoto@gmail.com"]
   gem.description   = %q{Sinatra extensions for blocking non-AJAX requests.}
   gem.summary       = gem.description
-  gem.homepage      = "https://github.com/ymmtmsys/sinatra-ajax_only"
+  gem.homepage      = "https://github.com/msysyamamoto/sinatra-ajax_only"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
